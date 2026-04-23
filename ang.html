@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="mylogin">
+<head>
+<style>
+</style>
+<script src ="app/angular-1.8.2/angular.min.js"></script>
+<script src ="ang.js"></script>
+<link rel="stylesheet" href="ang.css">
+</head>
+
+<body>
+    <div ng-controller="logincon">
+        <p>{{username}}</p>
+        <h2>your name</h2>
+        <input type="text" ng-model ="loginusername" placeholder="enter yor name" >
+        <h2>password</h2>
+        <input type="password" ng-model ="loginpassword" placeholder="enter your password">
+        <button ng-click ="login()">enter</button>
+            <p class="error">{{message}}</p>
+    </div>
+</body>
+</html> 
