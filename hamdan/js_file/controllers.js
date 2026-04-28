@@ -32,9 +32,9 @@ mylogin.directive("authOnly", function(authservice, $rootScope) {
         link: function(scope, element) {
             var updateVisibility = function() {
                 if (authservice.islogin()) {
-                    element.css('display', '');  // إظهار
+                    element.css('display', '');
                 } else {
-                    element.css('display', 'none'); // إخفاء
+                    element.css('display', 'none');
                 }
             };
             updateVisibility();
