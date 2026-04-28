@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="LoginApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Application - AngularJS 1.x</title>
+    
+    <!-- Styles -->
+    <link href="content/css/styles.css" rel="stylesheet" />
+    
+    <!-- AngularJS Framework -->
+    <script src="html/angular-1.8.2/angular.min.js"></script>
+    <script src="html/angular-1.8.2/angular-route.min.js"></script>
+    
+    <!-- Application Scripts -->
+    <script src="app.js"></script>
+    <script src="js/services/mock-auth-api.js"></script>
+    <script src="js/services/auth.service.js"></script>
+    <script src="js/services/http.interceptor.js"></script>
+    <script src="js/controllers/login.controller.js"></script>
+    <script src="js/controllers/dashboard.controller.js"></script>
+    <script src="js/directives/auth-if.directive.js"></script>
+    <script src="js/filters/format-timestamp.filter.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="app-title">AngularJS Login Application</h1>
+    </header>
+    
+    <!-- Main Application Container -->
+    <main class="app-container">
+        <div ng-view></div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 AngularJS Login Application - Task A</p>
+    </footer>
+</body>
+</html>

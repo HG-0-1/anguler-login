@@ -1,0 +1,27 @@
+<div class="dashboard-container" ng-controller="DashboardController">
+    <div class="dashboard-content">
+        <h1>🎉 Dashboard</h1>
+        
+        <!-- Authenticated section - visible only when user is logged in -->
+        <div auth-if class="user-info">
+            <h2 ng-if="user">👋 Welcome, <span ng-bind="user.name || user.username || 'User'"></span>!</h2>
+            
+            <div class="session-info">
+                <p><strong>⏰ Logged in at:</strong></p>
+                <p>
+                    <span ng-bind="user.timestamp | formatTimestamp"></span>
+                </p>
+            </div>
+
+            <div class="user-details" ng-if="user">
+                <p><strong>👤 User ID:</strong> <span ng-bind="user.id || 'N/A'"></span></p>
+                <p><strong>📧 Email:</strong> <span ng-bind="user.email || 'N/A'"></span></p>
+                <p><strong>🔑 Username:</strong> <span ng-bind="user.username || 'N/A'"></span></p>
+            </div>
+
+            <div class="logout-section">
+                <button ng-click="logout()" class="logout-button">🚪 Logout</button>
+            </div>
+        </div>
+    </div>
+</div>
